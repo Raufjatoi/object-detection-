@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection App</title>
+    <style>
+        body {
+            background-color: #001F3F; /* Dark blue background color */
+            color: white;
+            font-family: Arial, sans-serif;
+            position: relative;
+            height: 100%; /* Ensure body takes full height of viewport */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .profile-pics {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            display: flex;
+            z-index: 2; /* Ensure the profile pics are above other elements */
+        }
+        .profile-pic {
+            width: 91px;
+            height: 91px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid white;
+            filter: grayscale(100%); /* Convert profile pics to black and white */
+            transition: filter 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .profile-pic:hover {
+            filter: grayscale(0%); /* Restore original color on hover */
+        }
+        .heading {
+            background-color: yellow;
+            padding: 20px;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+            z-index: 1; /* Ensure the heading is above other elements */
+        }
+        .options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .option {
+            width: 200px;
+            height: 200px;
+            background-color: #FF4136; /* Red color */
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden; /* Hide any overflow content */
+            position: relative;
+        }
+        .option img {
+            width: 100%; /* Make the image fill the container */
+            height: 100%; /* Make the image fill the container */
+            object-fit: cover; /* Scale the image to cover the entire container */
+        }
+        .option:hover {
+            transform: scale(1.1);
+        }
+        .option p {
+            font-size: 18px; /* Increase font size for better visibility */
+            color: orangered; /* Orangered color */
+            margin: 5px 0; /* Add spacing above and below the text */
+            position: absolute; /* Position the text */
+            bottom: 15px; /* Align the text to the bottom */
+            left: 0; /* Center the text horizontally */
+            right: 0; /* Center the text horizontally */
+            z-index: 1; /* Ensure the text is above the image */
+        }
+        .bottom-text {
+            text-align: center;
+            position: fixed;
+            bottom: 20px;
+            left: 0;
+            width: 100%; /* Take full width */
+        }
+        .bottom-text span {
+            background-color: yellow;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #FF4136; /* Red color */
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-pics">
+        <img src="r.PNG" alt="Profile Pic" class="profile-pic">
+        <img src="profile2.jpg" alt="Profile Pic" class="profile-pic">
+        <img src="profile3.jpg" alt="Profile Pic" class="profile-pic">
+    </div>
+    <div class="heading">
+        <h1 style="color: #FF4136;">Object Detection App</h1>
+    </div>
+    <div class="options">
+        <a href="obliv.html" class="option">
+            <img src="2.jpg" alt="Live Detection">
+            <p>Live Object Detection</p>
+        </a>
+        <a href="obcus.html" class="option">
+            <img src="1.jpg" alt="Custom Detection">
+            <p>Custom Object Detection</p>
+        </a>
+    </div>
+    <div class="bottom-text">
+        <span>By Rauf, Ahsan, and Umar</span>
+    </div>
+</body>
+</html>

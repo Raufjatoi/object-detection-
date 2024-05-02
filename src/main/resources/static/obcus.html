@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Object Detection</title>
+    <style>
+        body {
+            background-color: #001F3F; /* Dark blue background color */
+            color: white;
+            font-family: Arial, sans-serif;
+            position: relative;
+            height: 100%; /* Ensure body takes full height of viewport */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .profile-pics {
+            position: fixed;
+            top: 91px;
+            right: 20px; /* Adjusted position */
+            display: flex;
+            z-index: 2; /* Ensure the profile pics are above other elements */
+        }
+        .profile-pic {
+            width: 91px; /* Adjusted size */
+            height: 91px; /* Adjusted size */
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid white;
+            filter: grayscale(100%); /* Convert profile pics to black and white */
+            transition: filter 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .profile-pic:hover {
+            filter: grayscale(0%); /* Restore original color on hover */
+        }
+        .heading {
+            background-color: yellow;
+            padding: 20px;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+            z-index: 1; /* Ensure the heading is above other elements */
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            margin-top: 50px;
+        }
+        .block {
+            width: 400px;
+            height: 400px;
+            background-color: #FF4136; /* Red color */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .pic-button {
+            padding: 10px 20px;
+            background-color: yellow;
+            border: 2px solid #FF4136; /* Red color */
+            color: #FF4136; /* Red color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .pic-button:hover {
+            background-color: #FF4136; /* Red color */
+            color: yellow;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid yellow;
+            color: yellow;
+            text-decoration: none;
+            z-index: 2; /* Ensure the button is above other elements */
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .back-button:hover {
+            background-color: yellow;
+            color: #FF4136; /* Red color */
+        }
+        .bottom-text {
+            text-align: center;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2; /* Ensure the text is above other elements */
+        }
+        .bottom-text a {
+            padding: 10px 20px;
+            background-color: yellow;
+            border: 2px solid #FF4136; /* Red color */
+            color: #FF4136; /* Red color */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .bottom-text a:hover {
+            background-color: #FF4136; /* Red color */
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-pics">
+        <img src="r.PNG" alt="Profile Pic" class="profile-pic">
+        <img src="profile2.jpg" alt="Profile Pic" class="profile-pic">
+        <img src="profile3.jpg" alt="Profile Pic" class="profile-pic">
+    </div>
+    <div class="heading">
+        <h1 style="color: #FF4136;">Custom Object Detection</h1>
+    </div>
+    <div class="options">
+        <div class="block">
+            <label for="upload-input" class="file-label">Upload Image</label>
+            <input type="file" id="upload-input">
+            <!-- Add pause/stop button here -->
+        </div>
+    </div>
+    <a href="index.html" class="back-button">Back</a>
+    <div class="bottom-text">
+        <a href="obliv.html">Try Live Object Detection</a>
+    </div>
+</body>
+</html>
